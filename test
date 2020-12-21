@@ -1,0 +1,105 @@
+passed
+6 8
+41 41 42 42 46 45 45 48
+43 43 44 44 46 47 47 48
+39 39 10 10 11 12 12 13
+15 15 14 14 11 17 17 13
+21 21 22 22 36 25 25 38
+23 23 24 24 36 27 27 38
+
+passed
+2 7
+9 7 7 6 6 11 11
+9 5 5 14 14 3 3
+
+passed
+2 10
+9 9 7 7 10 10 1 1 2 2
+6 6 5 5 4 4 3 3 8 8
+
+passed
+2 8
+9 9 7 7 6 6 11 11
+16 16 5 5 14 14 3 3
+
+passed
+2 10
+1 1 4 4 8 3 6 6 9 9
+2 2 5 5 8 3 7 7 10 10
+
+
+passed
+4 10
+9 9 7 7 10 10 1 1 2 2
+6 6 5 5 4 4 3 3 8 8
+12 12 4 4 8 3 6 6 11 11
+2 2 5 5 8 3 7 7 9 9
+
+passed
+4 10
+1 1 4 4 8 3 6 6 9 9
+2 2 5 5 8 3 7 7 10 10
+9 9 7 7 10 10 1 1 2 2
+6 6 5 5 4 4 3 3 8 8
+
+passed
+4 8
+5 5 12 12 1 7 7 9
+4 4 3 3 1 16 16 9
+2 2 6 6 10 13 14 14
+8 8 11 11 10 13 15 15
+
+passed
+4 8
+5 5 12 12 1 7 7 9
+4 4 3 3 1 16 16 9
+2 2 6 6 1 13 14 14
+8 8 11 11 10 13 15 15
+
+passed
+2 8
+2 1 1 4 5 5 6 6
+2 3 3 4 7 7 8 8
+
+passed
+4 8
+1 2 2 12 5 7 7 16
+1 10 10 12 5 15 15 16
+9 9 3 4 4 8 8 14
+11 11 3 13 13 6 6 14
+
+passed (no solution because of two consecutive vertical bricks(14, 15))
+4 8
+5 5 12 12 1 7 7 9
+4 4 3 3 1 16 16 9
+2 2 6 6 10 13 14 15
+8 8 11 11 10 13 14 15
+
+passed
+6 4
+5 5 2 2
+12 12 7 7
+1 4 4 3
+1 8 8 3
+6 6 9 9
+10 10 11 11
+
+
+
+for x in range(len(matrix)):
+    for y in range(len(matrix[0])):
+        if y == 0:
+            print('|', end='')
+        if matrix[x][y] in horizontals:
+            if y == len(matrix[0]) - 1:
+                            if matrix[x][y] != matrix[x][y + 1]:
+                print(f"{matrix[x][y]}\t{matrix[x][y]}|", end='')
+            elif 0 < y < len(matrix[0]) - 1:
+                print(f"{ma}{}")
+        elif matrix[x][y] in verticals:
+            if y == len(matrix[0]) - 1:
+                print(f"\t|{'c'}", end='')
+            elif 0 < y < len(matrix[0]) - 1:
+                print(f"\t|{'c'}|\t", end='')
+            else:
+                print(f"{matrix[x][y]}")
